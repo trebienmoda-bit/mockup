@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Personalize sua Camiseta</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Personalize sua Camiseta</h1>
+
+<select id="corSelect">
+  <option value="preta">Camiseta Preta</option>
+  <option value="branca">Camiseta Branca</option>
+</select>
+
+<input type="file" id="upload" accept="image/*">
+
+<div class="canvas-area">
+  <img id="base" src="camiseta_preta.png" alt="Camiseta">
+  <img id="arte" class="draggable" alt="Arte do Cliente">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -27,4 +27,6 @@ button {
   left: 100px;
   width: 150px;
   cursor: move;
+  transform-origin: center center;
 }
+

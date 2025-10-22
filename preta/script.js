@@ -32,21 +32,20 @@ window.addEventListener('mouseup', () => isDragging = false);
 
 // Redimensionar com roda do mouse
 arte.addEventListener('wheel', (e) => {
-  e.preventDefault();
-  let width = parseInt(arte.style.width);
-  width += e.deltaY < 0 ? 10 : -10;
-  if(width < 30) width = 30;
-  if(width > 800) width = 800;
-  arte.style.width = width + 'px';
-});
-
-// Girar com Shift + roda do mouse
-arte.addEventListener('wheel', (e) => {
   if(e.shiftKey){
+    // girar
     e.preventDefault();
     let rotate = arte.style.transform.match(/rotate\((-?\d+)deg\)/);
     rotate = rotate ? parseInt(rotate[1]) : 0;
     rotate += e.deltaY < 0 ? 5 : -5;
     arte.style.transform = `rotate(${rotate}deg)`;
+  } else {
+    // redimensionar
+    e.preventDefault();
+    let width = parseInt(arte.style.width);
+    width += e.deltaY < 0 ? 10 : -10;
+    if(width < 30) width = 30;
+    if(width > 800) width = 800;
+    arte.style.width = width + 'px';
   }
 });

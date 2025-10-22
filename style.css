@@ -1,0 +1,23 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f8f8f8;
+}
+h1 {
+  margin-top: 20px;
+}
+.canvas-area {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+.canvas-area img {
+  max-width: 400px;
+}
+#arte {
+  position: absolute;
+  top: 120px;
+  left: 100px;
+  width: 150px;
+  cursor: move;
+}
